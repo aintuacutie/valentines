@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+#include <cctype>
+using namespace std;
+
+int main() {
+    string crushName,response;
+
+
+
+    cout << " Hi Celine! :>";
+    getline(cin, crushName);
+
+
+    cout << "My Dear Celine " << crushName << ",\n";
+    cout << "Happy Valentine's Day!\n";
+    cout << "I have been wanting to tell you that I really like you.\n";
+    cout << "Would you be my Valentine? yes or no: ";
+    cin >> response;
+
+
+    for (char &c :response) {
+        c= tolower (c);
+    }
+    if (response == "yes") {
+        cout << "That's wonderful! Let's make it a memorable Valentine's Day!\n";
+    }
+    else
+        cout << "Oh, I understand. Thank you for your honesty. Have a great day!\n";
+
+
+    return 0;
+}
